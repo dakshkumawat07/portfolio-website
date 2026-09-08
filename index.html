@@ -1,472 +1,1108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daksh Kumawat is a first-year Computer Science student at Manipal University Jaipur building practical software projects in C, Python, and web technologies while exploring AI, Machine Learning, and Data Science.">
+  <meta name="author" content="Daksh Kumawat">
+  <meta name="keywords" content="Daksh Kumawat, Computer Science Student, Portfolio, Python, C, Linux, Git, Manipal University Jaipur, AI, Machine Learning, Data Science">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="color-scheme" content="dark light">
 
-    <meta
-        name="description"
-        content="Personal portfolio website of Daksh Kumawat, a Computer Science student showcasing projects, skills, education, and development journey."
-    >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daksh Kumawat | Computer Science Student">
+  <meta property="og:description" content="Building things that actually work. First-year Computer Science student exploring AI, Machine Learning, and Data Science.">
+  <meta property="og:site_name" content="Daksh Kumawat">
 
-    <title>Daksh Kumawat | Computer Science Student</title>
+  <title>Daksh Kumawat | Computer Science Student</title>
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body class="no-js" data-scroll-container>
 
-    <!-- ==================== HEADER ==================== -->
-    <header class="site-header">
+  <!-- ============================================================
+       INTRO / LOADER
+       Non-blocking. Content underneath is always present in the DOM.
+       ============================================================ -->
+  <div class="intro" id="intro" role="status" aria-live="polite" aria-label="Loading portfolio" data-intro>
+    <div class="intro__inner">
+      <p class="intro__mark" data-intro-mark>
+        <span class="intro__letter" data-intro-letter>D</span><span class="intro__letter" data-intro-letter>K</span>
+      </p>
+      <p class="intro__name" data-intro-name>Daksh Kumawat</p>
+      <div class="intro__progress" aria-hidden="true">
+        <span class="intro__progress-bar" data-intro-bar></span>
+      </div>
+      <p class="intro__status"><span class="visually-hidden">Loading</span><span class="intro__counter" data-intro-counter aria-hidden="true">00</span></p>
+    </div>
+    <button class="intro__skip" type="button" data-intro-skip aria-label="Skip intro and go to content">Skip</button>
+  </div>
 
-        <nav class="navbar" aria-label="Main navigation">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-            <a href="#home" class="logo">
-                Daksh<span>.</span>
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header class="site-header" id="top" data-header>
+    <nav class="nav" aria-label="Primary navigation" data-nav>
+      <a class="nav__logo" href="#hero" aria-label="DK, back to home">
+        <span class="nav__logo-mark">DK</span><span class="nav__logo-dot" aria-hidden="true">.</span>
+      </a>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        data-nav-toggle>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+        <span class="nav__toggle-text">Menu</span>
+      </button>
+
+      <div class="nav__menu" id="nav-menu" data-nav-menu>
+        <ul class="nav__list" role="list">
+          <li class="nav__item"><a class="nav__link is-active" href="#hero" data-nav-link="hero"><span class="nav__index" aria-hidden="true">00</span>Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about" data-nav-link="about"><span class="nav__index" aria-hidden="true">01</span>About</a></li>
+          <li class="nav__item"><a class="nav__link" href="#skills" data-nav-link="skills"><span class="nav__index" aria-hidden="true">02</span>Skills</a></li>
+          <li class="nav__item"><a class="nav__link" href="#projects" data-nav-link="projects"><span class="nav__index" aria-hidden="true">03</span>Projects</a></li>
+          <li class="nav__item"><a class="nav__link" href="#proof" data-nav-link="proof"><span class="nav__index" aria-hidden="true">04</span>Proof</a></li>
+          <li class="nav__item"><a class="nav__link" href="#education" data-nav-link="education"><span class="nav__index" aria-hidden="true">05</span>Education</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact" data-nav-link="contact"><span class="nav__index" aria-hidden="true">06</span>Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle color theme"
+            aria-pressed="false"
+            data-theme-toggle>
+            <span class="theme-toggle__track" aria-hidden="true">
+              <span class="theme-toggle__thumb"></span>
+            </span>
+            <span class="theme-toggle__label">Theme</span>
+          </button>
+          <a class="nav__cta" href="#contact">Let's talk</a>
+        </div>
+      </div>
+
+      <div class="nav__progress" aria-hidden="true">
+        <span class="nav__progress-bar" data-scroll-progress></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main" class="site-main">
+
+    <!-- ==========================================================
+         HERO
+         ========================================================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading" data-section="hero" data-pin>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__content" data-hero-content>
+          <p class="eyebrow hero__eyebrow" data-reveal>
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Computer Science Student · 2026
+          </p>
+
+          <h1 class="hero__title" id="hero-heading" data-hero-title>
+            <span class="hero__line" data-hero-line>Building</span>
+            <span class="hero__line hero__line--accent" data-hero-line>
+              <span class="hero__word hero__word--things" data-hero-word="things">things</span>
+            </span>
+            <span class="hero__line" data-hero-line>that actually work.</span>
+          </h1>
+
+          <p class="hero__description" data-reveal>
+            I'm Daksh, a first-year Computer Science student building practical software projects while exploring AI, Machine Learning, and Data Science.
+          </p>
+
+          <div class="hero__actions" data-reveal>
+            <a class="button button--primary" href="#projects" data-magnetic>
+              <span class="button__label">Explore my work</span>
+              <span class="button__icon" aria-hidden="true">→</span>
             </a>
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
-
-            <ul class="nav-links">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-    <!-- ==================== MAIN CONTENT ==================== -->
-    <main>
-
-    <!-- ==================== HERO ==================== -->
-<section id="home" class="hero">
-
-    <div class="hero-content">
-
-        <p class="hero-label">
-            Computer Science Student · Builder
-        </p>
-
-        <h1>
-            Building things<br>
-            <span>that actually work.</span>
-        </h1>
-
-        <p class="hero-description">
-            I'm Daksh, a first-year Computer Science student exploring
-            software development through real projects, problem solving,
-            and hands-on experimentation.
-        </p>
-
-        <div class="hero-actions">
-
-            <a href="#projects" class="button">
-                Explore Projects
+            <a class="button button--ghost" href="https://github.com/dakshkumawat07" target="_blank" rel="noopener noreferrer" data-magnetic>
+              <span class="button__label">GitHub</span>
+              <span class="button__icon" aria-hidden="true">↗</span>
+              <span class="visually-hidden">(opens in a new tab)</span>
             </a>
+          </div>
 
-            <a
-                href="https://github.com/dakshkumawat07"
-                class="button button-secondary"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub ↗
-            </a>
-
+          <dl class="hero__meta" data-reveal>
+            <div class="hero__meta-item">
+              <dt>Based at</dt>
+              <dd>Manipal University Jaipur</dd>
+            </div>
+            <div class="hero__meta-item">
+              <dt>Focus</dt>
+              <dd>Python · C · Linux</dd>
+            </div>
+            <div class="hero__meta-item">
+              <dt>Status</dt>
+              <dd><span class="status-dot" aria-hidden="true"></span>Open to internships</dd>
+            </div>
+          </dl>
         </div>
 
-    </div>
+        <!-- 3D STAGE -->
+        <div class="hero-3d-stage" data-hero-stage aria-hidden="true">
+          <div class="hero-3d-scene" data-hero-scene>
 
+            <div class="hero-3d-object" data-hero-object>
+              <div class="hero-3d-face hero-3d-face--front" data-face="front">
+                <span class="hero-3d-face__label">&lt;/&gt;</span>
+                <span class="hero-3d-face__caption">Code</span>
+              </div>
+              <div class="hero-3d-face hero-3d-face--back" data-face="back">
+                <span class="hero-3d-face__label">DK</span>
+                <span class="hero-3d-face__caption">Daksh Kumawat</span>
+              </div>
+              <div class="hero-3d-face hero-3d-face--right" data-face="right">
+                <span class="hero-3d-face__label">C</span>
+                <span class="hero-3d-face__caption">Fundamentals</span>
+              </div>
+              <div class="hero-3d-face hero-3d-face--left" data-face="left">
+                <span class="hero-3d-face__label">PY</span>
+                <span class="hero-3d-face__caption">Python</span>
+              </div>
+              <div class="hero-3d-face hero-3d-face--top" data-face="top">
+                <span class="hero-3d-face__label">GIT</span>
+                <span class="hero-3d-face__caption">Version control</span>
+              </div>
+              <div class="hero-3d-face hero-3d-face--bottom" data-face="bottom">
+                <span class="hero-3d-face__label">AI</span>
+                <span class="hero-3d-face__caption">Exploring</span>
+              </div>
 
-    <!-- Decorative 3D visual -->
-    <div class="hero-visual" aria-hidden="true">
+              <div class="hero-3d-core" data-hero-core>
+                <span class="hero-3d-core__ring"></span>
+                <span class="hero-3d-core__ring"></span>
+                <span class="hero-3d-core__ring"></span>
+              </div>
+            </div>
 
-        <div class="hero-orbit hero-orbit-one"></div>
-        <div class="hero-orbit hero-orbit-two"></div>
+            <div class="hero-orbit hero-orbit--1" data-orbit="1">
+              <span class="hero-orbit__node" data-orbit-node>C</span>
+            </div>
+            <div class="hero-orbit hero-orbit--2" data-orbit="2">
+              <span class="hero-orbit__node" data-orbit-node>PY</span>
+            </div>
+            <div class="hero-orbit hero-orbit--3" data-orbit="3">
+              <span class="hero-orbit__node" data-orbit-node>GIT</span>
+            </div>
 
-        <div class="hero-core">
-            <span>&lt;/&gt;</span>
+            <div class="hero-particles" data-particles>
+              <span class="hero-particle" data-particle data-depth="0.2"></span>
+              <span class="hero-particle" data-particle data-depth="0.4"></span>
+              <span class="hero-particle" data-particle data-depth="0.6"></span>
+              <span class="hero-particle" data-particle data-depth="0.8"></span>
+              <span class="hero-particle" data-particle data-depth="0.3"></span>
+              <span class="hero-particle" data-particle data-depth="0.5"></span>
+              <span class="hero-particle" data-particle data-depth="0.7"></span>
+              <span class="hero-particle" data-particle data-depth="0.9"></span>
+              <span class="hero-particle" data-particle data-depth="0.35"></span>
+              <span class="hero-particle" data-particle data-depth="0.65"></span>
+              <span class="hero-particle" data-particle data-depth="0.45"></span>
+              <span class="hero-particle" data-particle data-depth="0.85"></span>
+            </div>
+
+            <div class="hero-3d-floor" data-hero-floor></div>
+            <div class="hero-3d-glow" data-hero-glow></div>
+          </div>
+
+          <div class="hero-3d-readout" data-hero-readout>
+            <span class="hero-3d-readout__item">ROT <span data-readout="rotation">000°</span></span>
+            <span class="hero-3d-readout__item">DEPTH <span data-readout="depth">0.00</span></span>
+            <span class="hero-3d-readout__item">OBJ <span data-readout="object">DK-01</span></span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-indicator" href="#about" data-scroll-indicator>
+        <span class="scroll-indicator__label">Scroll to explore</span>
+        <span class="scroll-indicator__arrow" aria-hidden="true">↓</span>
+      </a>
+
+      <div class="hero__corner hero__corner--tl" aria-hidden="true">v.2026</div>
+      <div class="hero__corner hero__corner--br" aria-hidden="true">26.7° N · 75.8° E</div>
+    </section>
+
+    <!-- ==========================================================
+         ABOUT
+         ========================================================== -->
+    <section class="section about" id="about" aria-labelledby="about-heading" data-section="about">
+      <div class="section__inner">
+        <header class="section__header" data-reveal>
+          <p class="section__number"><span class="section__num">01</span><span class="section__slash" aria-hidden="true">/</span><span class="section__label">About</span></p>
+          <h2 class="section__title" id="about-heading">
+            <span class="section__title-line" data-split>Learning by</span>
+            <span class="section__title-line" data-split>building.</span>
+          </h2>
+        </header>
+
+        <div class="about__layout">
+          <div class="about__text" data-reveal>
+            <p class="about__lead">
+              I am at the beginning of my engineering journey, and I learn technology by building practical projects rather than only reading about it.
+            </p>
+            <p>
+              Every project in this portfolio started as a question: how does this actually work? Answering that question has taught me more about memory, logic, tooling, and debugging than any single lecture. I break things, fix them, and write down what I learned.
+            </p>
+            <p>
+              Right now I am strengthening my foundations while gradually exploring the areas I want to specialise in over the coming years.
+            </p>
+          </div>
+
+          <aside class="about__aside" data-reveal data-parallax="0.15">
+            <div class="about__column">
+              <h3 class="about__column-title">Strengthening</h3>
+              <ul class="tag-list" role="list">
+                <li class="tag">C</li>
+                <li class="tag">Python</li>
+                <li class="tag">Linux</li>
+                <li class="tag">Git</li>
+                <li class="tag">GitHub</li>
+                <li class="tag">Web development</li>
+              </ul>
+            </div>
+            <div class="about__column">
+              <h3 class="about__column-title">Exploring</h3>
+              <ul class="tag-list tag-list--accent" role="list">
+                <li class="tag tag--accent">AI</li>
+                <li class="tag tag--accent">Machine Learning</li>
+                <li class="tag tag--accent">Data Science</li>
+              </ul>
+            </div>
+          </aside>
         </div>
 
-        <div class="hero-dot hero-dot-one"></div>
-        <div class="hero-dot hero-dot-two"></div>
-        <div class="hero-dot hero-dot-three"></div>
+        <dl class="stats" data-reveal data-stats>
+          <div class="stat" data-stat>
+            <dt class="stat__label">Year of Computer Science</dt>
+            <dd class="stat__value" data-count="1" data-format="pad">01</dd>
+          </div>
+          <div class="stat" data-stat>
+            <dt class="stat__label">Featured Projects</dt>
+            <dd class="stat__value" data-count="4" data-format="pad">04</dd>
+          </div>
+          <div class="stat" data-stat>
+            <dt class="stat__label">Hackathon Experience</dt>
+            <dd class="stat__value" data-count="1" data-format="pad">01</dd>
+          </div>
+          <div class="stat" data-stat>
+            <dt class="stat__label">Learning Credentials</dt>
+            <dd class="stat__value" data-count="3" data-format="pad" data-suffix="+">03+</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-    </div>
+    <!-- ==========================================================
+         SKILLS (overview)
+         ========================================================== -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading" data-section="skills">
+      <div class="section__inner">
+        <header class="section__header" data-reveal>
+          <p class="section__number"><span class="section__num">02</span><span class="section__slash" aria-hidden="true">/</span><span class="section__label">Skills</span></p>
+          <h2 class="section__title" id="skills-heading">
+            <span class="section__title-line" data-split>Tools I'm</span>
+            <span class="section__title-line" data-split>building with.</span>
+          </h2>
+          <p class="section__intro">
+            Four tools I use every week. Each one is tied to a real project below, not just a badge on a list.
+          </p>
+        </header>
 
-</section>
+        <ol class="skill-index" role="list" data-skill-index>
+          <li class="skill-index__item" data-skill-index-item="c">
+            <a class="skill-index__link" href="#skill-c" data-skill-jump="c">
+              <span class="skill-index__num">01</span>
+              <span class="skill-index__symbol" aria-hidden="true">C</span>
+              <span class="skill-index__name">C</span>
+              <span class="skill-index__category">Programming</span>
+            </a>
+          </li>
+          <li class="skill-index__item" data-skill-index-item="python">
+            <a class="skill-index__link" href="#skill-python" data-skill-jump="python">
+              <span class="skill-index__num">02</span>
+              <span class="skill-index__symbol" aria-hidden="true">Py</span>
+              <span class="skill-index__name">Python</span>
+              <span class="skill-index__category">Programming</span>
+            </a>
+          </li>
+          <li class="skill-index__item" data-skill-index-item="git">
+            <a class="skill-index__link" href="#skill-git" data-skill-jump="git">
+              <span class="skill-index__num">03</span>
+              <span class="skill-index__symbol" aria-hidden="true">⎇</span>
+              <span class="skill-index__name">Git &amp; GitHub</span>
+              <span class="skill-index__category">Development Tools</span>
+            </a>
+          </li>
+          <li class="skill-index__item" data-skill-index-item="linux">
+            <a class="skill-index__link" href="#skill-linux" data-skill-jump="linux">
+              <span class="skill-index__num">04</span>
+              <span class="skill-index__symbol" aria-hidden="true">$_</span>
+              <span class="skill-index__name">Linux</span>
+              <span class="skill-index__category">Systems</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <!-- ==================== SKILLS ==================== -->
-        <section id="skills" class="section skills">
+    <!-- ==========================================================
+         3D SKILL SHOWCASE (scroll-driven)
+         ========================================================== -->
+    <section class="skill-experience" id="skill-experience" aria-label="Skill showcase" data-section="skill-experience" data-skill-experience>
+      <div class="skill-track" data-skill-track>
+        <div class="skill-stage" data-skill-stage data-pin>
 
-            <div class="section-heading">
-                <p class="section-label">Skills</p>
-                <h2>What I Work With</h2>
-            </div>
+          <div class="skill-stage__hud" aria-hidden="true">
+            <span class="skill-stage__counter"><span data-skill-current>01</span><span class="skill-stage__divider">/</span><span data-skill-total>04</span></span>
+            <span class="skill-stage__progress"><span class="skill-stage__progress-bar" data-skill-progress></span></span>
+            <span class="skill-stage__hint">Travelling through the stack</span>
+          </div>
 
-            <div class="skills-grid">
+          <div class="skill-camera" data-skill-camera>
 
-                <article class="skill-card">
-                    <h3>Programming</h3>
-
-                    <ul>
-                        <li>C</li>
-                        <li>Python</li>
-                        <li>Problem Solving</li>
+            <!-- SCENE 01 · C -->
+            <article class="skill-scene skill-scene--c is-active" id="skill-c" data-skill-scene="c" data-skill-index="1">
+              <div class="skill-card" data-skill-card>
+                <div class="skill-visual" data-skill-visual aria-hidden="true">
+                  <span class="skill-visual__symbol" data-skill-symbol>C</span>
+                  <span class="skill-visual__ring" data-depth="0.3"></span>
+                  <span class="skill-visual__ring" data-depth="0.6"></span>
+                  <span class="skill-visual__ring" data-depth="0.9"></span>
+                  <span class="skill-visual__fragment skill-visual__fragment--1" data-depth="0.4">int</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--2" data-depth="0.7">*ptr</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--3" data-depth="0.5">[ ]</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--4" data-depth="0.8">{ }</span>
+                </div>
+                <div class="skill-content" data-skill-content>
+                  <p class="skill-content__index"><span class="skill-content__num">01</span><span class="skill-content__category">Programming</span></p>
+                  <h3 class="skill-content__name">C</h3>
+                  <p class="skill-content__description">
+                    Building strong programming fundamentals through console-based applications and problem solving.
+                  </p>
+                  <ul class="tag-list" role="list" aria-label="C topics">
+                    <li class="tag">Logic</li>
+                    <li class="tag">Functions</li>
+                    <li class="tag">Arrays</li>
+                  </ul>
+                  <div class="skill-content__evidence">
+                    <p class="skill-content__evidence-label">Evidence</p>
+                    <ul class="evidence-list" role="list">
+                      <li><a class="evidence-link" href="#project-atm-simulator">ATM Simulator</a></li>
+                      <li><a class="evidence-link" href="#project-student-marks-analyzer">Student Marks Analyzer</a></li>
                     </ul>
-                </article>
-
-
-                <article class="skill-card">
-                    <h3>Web Development</h3>
-
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </article>
-
-
-                <article class="skill-card">
-                    <h3>Tools</h3>
-
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>VS Code</li>
-                        <li>Linux</li>
-                    </ul>
-                </article>
-
-            </div>
-
-        </section>
-
-
-          <!-- ==================== PROJECTS ==================== -->
-<section id="projects" class="section projects">
-
-    <div class="section-heading">
-        <p class="section-label">Selected Work</p>
-        <h2>Things I've Built</h2>
-        <p class="section-intro">
-            A collection of projects built while learning, experimenting,
-            and solving practical problems.
-        </p>
-    </div>
-
-    <div class="projects-grid">
-
-        <!-- Project 1 — Featured -->
-        <article class="project-card project-featured">
-
-            <div class="project-content">
-
-                <div class="project-topline">
-                    <p class="project-type">
-                        Hackathon Project
-                    </p>
-
-                    <span class="project-number">
-                        01
-                    </span>
+                  </div>
                 </div>
-
-                <h3>
-                    GigPass
-                </h3>
-
-                <p class="project-subtitle">
-                    Gig-Worker Portable Reputation Passport
-                </p>
-
-                <p>
-                    A cryptographically verifiable reputation passport
-                    designed to let gig workers carry trusted work history,
-                    ratings, and reliability data between platforms.
-                </p>
-
-                <ul class="project-tech">
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Cryptography</li>
-                </ul>
-
-            </div>
-
-            <a
-                href="https://github.com/dakshkumawat07/gig-worker-reputation-passport"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View GigPass project on GitHub"
-            >
-                View Project ↗
-            </a>
-
-        </article>
-
-
-        <!-- Project 2 -->
-        <article class="project-card">
-
-            <div class="project-content">
-
-                <div class="project-topline">
-                    <p class="project-type">
-                        Python
-                    </p>
-
-                    <span class="project-number">
-                        02
-                    </span>
-                </div>
-
-                <h3>
-                    System Health Monitor
-                </h3>
-
-                <p>
-                    A Python utility that monitors CPU, memory, disk usage,
-                    network information, uptime, and overall system health.
-                </p>
-
-                <ul class="project-tech">
-                    <li>Python</li>
-                    <li>psutil</li>
-                    <li>Linux</li>
-                </ul>
-
-            </div>
-
-            <a
-                href="https://github.com/dakshkumawat07/system-health-monitor"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View System Health Monitor project on GitHub"
-            >
-                View Project ↗
-            </a>
-
-        </article>
-
-
-        <!-- Project 3 -->
-        <article class="project-card">
-
-            <div class="project-content">
-
-                <div class="project-topline">
-                    <p class="project-type">
-                        C Programming
-                    </p>
-
-                    <span class="project-number">
-                        03
-                    </span>
-                </div>
-
-                <h3>
-                    ATM Simulator
-                </h3>
-
-                <p>
-                    A console-based ATM simulation with PIN authentication,
-                    balance management, deposits, withdrawals, PIN changes,
-                    and transaction history.
-                </p>
-
-                <ul class="project-tech">
-                    <li>C</li>
-                    <li>Functions</li>
-                    <li>Control Flow</li>
-                </ul>
-
-            </div>
-
-            <a
-                href="https://github.com/dakshkumawat07/atm-simulator"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View ATM Simulator project on GitHub"
-            >
-                View Project ↗
-            </a>
-
-        </article>
-
-
-        <!-- Project 4 -->
-        <article class="project-card">
-
-            <div class="project-content">
-
-                <div class="project-topline">
-                    <p class="project-type">
-                        C Programming
-                    </p>
-
-                    <span class="project-number">
-                        04
-                    </span>
-                </div>
-
-                <h3>
-                    Student Marks Analyzer
-                </h3>
-
-                <p>
-                    A C program that analyzes student marks, calculates
-                    totals, identifies highest and lowest scores, and
-                    provides grade statistics.
-                </p>
-
-                <ul class="project-tech">
-                    <li>C</li>
-                    <li>Arrays</li>
-                    <li>Functions</li>
-                </ul>
-
-            </div>
-
-            <a
-                href="https://github.com/dakshkumawat07/Student-Marks-Analyzer"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Student Marks Analyzer project on GitHub"
-            >
-                View Project ↗
-            </a>
-
-        </article>
-
-    </div>
-
-</section>        
-
-
-        <!-- ==================== EDUCATION ==================== -->
-        <section id="education" class="section education">
-
-            <div class="section-heading">
-                <p class="section-label">Education</p>
-                <h2>My Education</h2>
-            </div>
-
-            <article class="education-card">
-
-                <div>
-                    <p class="education-period">
-                        2026 — Present
-                    </p>
-
-                    <h3>
-                        Bachelor of Technology in Computer Science
-                    </h3>
-
-                    <p>
-                        Manipal University Jaipur
-                    </p>
-                </div>
-
+              </div>
             </article>
 
-        </section>
-
-
-        <!-- ==================== CONTACT ==================== -->
-        <section id="contact" class="section contact">
-
-            <div class="section-heading">
-                <p class="section-label">Contact</p>
-                <h2>Let's Connect</h2>
-            </div>
-
-            <div class="contact-content">
-
-                <p>
-                    I'm always open to connecting with fellow students,
-                    developers, and people interested in technology.
-                </p>
-
-                <div class="contact-links">
-
-                    <a href="mailto:your-email@example.com">
-                        Email
-                    </a>
-
-                    <a
-                        href="https://github.com/dakshkumawat07"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        LinkedIn
-                    </a>
-
+            <!-- SCENE 02 · PYTHON -->
+            <article class="skill-scene skill-scene--python" id="skill-python" data-skill-scene="python" data-skill-index="2">
+              <div class="skill-card" data-skill-card>
+                <div class="skill-visual" data-skill-visual aria-hidden="true">
+                  <span class="skill-visual__symbol" data-skill-symbol>Py</span>
+                  <span class="skill-visual__ring" data-depth="0.3"></span>
+                  <span class="skill-visual__ring" data-depth="0.6"></span>
+                  <span class="skill-visual__ring" data-depth="0.9"></span>
+                  <span class="skill-visual__fragment skill-visual__fragment--1" data-depth="0.4">def</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--2" data-depth="0.7">import</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--3" data-depth="0.5">psutil</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--4" data-depth="0.8">data</span>
                 </div>
+                <div class="skill-content" data-skill-content>
+                  <p class="skill-content__index"><span class="skill-content__num">02</span><span class="skill-content__category">Programming</span></p>
+                  <h3 class="skill-content__name">Python</h3>
+                  <p class="skill-content__description">
+                    Using Python to build practical utilities and explore data-focused development.
+                  </p>
+                  <ul class="tag-list" role="list" aria-label="Python topics">
+                    <li class="tag">Python</li>
+                    <li class="tag">psutil</li>
+                    <li class="tag">Data</li>
+                  </ul>
+                  <div class="skill-content__evidence">
+                    <p class="skill-content__evidence-label">Evidence</p>
+                    <ul class="evidence-list" role="list">
+                      <li><a class="evidence-link" href="#project-system-health-monitor">System Health Monitor</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
 
+            <!-- SCENE 03 · GIT & GITHUB -->
+            <article class="skill-scene skill-scene--git" id="skill-git" data-skill-scene="git" data-skill-index="3">
+              <div class="skill-card" data-skill-card>
+                <div class="skill-visual" data-skill-visual aria-hidden="true">
+                  <span class="skill-visual__symbol" data-skill-symbol>⎇</span>
+                  <span class="skill-visual__ring" data-depth="0.3"></span>
+                  <span class="skill-visual__ring" data-depth="0.6"></span>
+                  <span class="skill-visual__ring" data-depth="0.9"></span>
+                  <span class="skill-visual__fragment skill-visual__fragment--1" data-depth="0.4">commit</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--2" data-depth="0.7">branch</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--3" data-depth="0.5">merge</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--4" data-depth="0.8">push</span>
+                  <span class="skill-visual__graph">
+                    <span class="skill-visual__node"></span>
+                    <span class="skill-visual__node"></span>
+                    <span class="skill-visual__node"></span>
+                    <span class="skill-visual__node"></span>
+                  </span>
+                </div>
+                <div class="skill-content" data-skill-content>
+                  <p class="skill-content__index"><span class="skill-content__num">03</span><span class="skill-content__category">Development Tools</span></p>
+                  <h3 class="skill-content__name">Git &amp; GitHub</h3>
+                  <p class="skill-content__description">
+                    Using version control and GitHub to manage projects and maintain a professional development workflow.
+                  </p>
+                  <ul class="tag-list" role="list" aria-label="Git topics">
+                    <li class="tag">Git</li>
+                    <li class="tag">GitHub</li>
+                    <li class="tag">Workflow</li>
+                  </ul>
+                  <div class="skill-content__evidence">
+                    <p class="skill-content__evidence-label">Evidence</p>
+                    <ul class="evidence-list" role="list">
+                      <li><a class="evidence-link" href="https://github.com/dakshkumawat07" target="_blank" rel="noopener noreferrer">All repositories on GitHub <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SCENE 04 · LINUX -->
+            <article class="skill-scene skill-scene--linux" id="skill-linux" data-skill-scene="linux" data-skill-index="4">
+              <div class="skill-card" data-skill-card>
+                <div class="skill-visual" data-skill-visual aria-hidden="true">
+                  <span class="skill-visual__symbol" data-skill-symbol>$_</span>
+                  <span class="skill-visual__ring" data-depth="0.3"></span>
+                  <span class="skill-visual__ring" data-depth="0.6"></span>
+                  <span class="skill-visual__ring" data-depth="0.9"></span>
+                  <span class="skill-visual__fragment skill-visual__fragment--1" data-depth="0.4">bash</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--2" data-depth="0.7">/proc</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--3" data-depth="0.5">chmod</span>
+                  <span class="skill-visual__fragment skill-visual__fragment--4" data-depth="0.8">grep</span>
+                  <span class="skill-visual__terminal">
+                    <span class="skill-visual__terminal-line">$ uname -a</span>
+                    <span class="skill-visual__terminal-line">$ htop</span>
+                    <span class="skill-visual__terminal-line">$ python3 monitor.py</span>
+                    <span class="skill-visual__terminal-cursor"></span>
+                  </span>
+                </div>
+                <div class="skill-content" data-skill-content>
+                  <p class="skill-content__index"><span class="skill-content__num">04</span><span class="skill-content__category">Systems</span></p>
+                  <h3 class="skill-content__name">Linux</h3>
+                  <p class="skill-content__description">
+                    Working in Linux environments while developing projects and learning system-level concepts.
+                  </p>
+                  <ul class="tag-list" role="list" aria-label="Linux topics">
+                    <li class="tag">Terminal</li>
+                    <li class="tag">CLI</li>
+                    <li class="tag">Systems</li>
+                  </ul>
+                  <div class="skill-content__evidence">
+                    <p class="skill-content__evidence-label">Evidence</p>
+                    <ul class="evidence-list" role="list">
+                      <li><a class="evidence-link" href="#project-system-health-monitor">System Health Monitor</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="skill-stage__depth-grid" data-skill-depth-grid aria-hidden="true">
+            <span class="skill-stage__depth-line"></span>
+            <span class="skill-stage__depth-line"></span>
+            <span class="skill-stage__depth-line"></span>
+            <span class="skill-stage__depth-line"></span>
+            <span class="skill-stage__depth-line"></span>
+            <span class="skill-stage__depth-line"></span>
+          </div>
+
+          <nav class="skill-stage__dots" aria-label="Skill scenes" data-skill-dots>
+            <a class="skill-stage__dot is-active" href="#skill-c" aria-label="Go to C" data-skill-dot="c"></a>
+            <a class="skill-stage__dot" href="#skill-python" aria-label="Go to Python" data-skill-dot="python"></a>
+            <a class="skill-stage__dot" href="#skill-git" aria-label="Go to Git and GitHub" data-skill-dot="git"></a>
+            <a class="skill-stage__dot" href="#skill-linux" aria-label="Go to Linux" data-skill-dot="linux"></a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         PROJECTS
+         ========================================================== -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading" data-section="projects">
+      <div class="section__inner">
+        <header class="section__header" data-reveal>
+          <p class="section__number"><span class="section__num">03</span><span class="section__slash" aria-hidden="true">/</span><span class="section__label">Projects</span></p>
+          <h2 class="section__title" id="projects-heading">
+            <span class="section__title-line" data-split>Built, tested,</span>
+            <span class="section__title-line" data-split>learned.</span>
+          </h2>
+        </header>
+
+        <div class="projects__toolbar" data-reveal>
+          <div class="filter" role="group" aria-label="Filter projects by technology" data-filter-group>
+            <button class="filter__button is-active" type="button" data-filter="all" aria-pressed="true">All <span class="filter__count" aria-hidden="true">4</span></button>
+            <button class="filter__button" type="button" data-filter="c" aria-pressed="false">C <span class="filter__count" aria-hidden="true">2</span></button>
+            <button class="filter__button" type="button" data-filter="python" aria-pressed="false">Python <span class="filter__count" aria-hidden="true">1</span></button>
+            <button class="filter__button" type="button" data-filter="web" aria-pressed="false">Web <span class="filter__count" aria-hidden="true">1</span></button>
+          </div>
+          <p class="projects__status" aria-live="polite" data-filter-status>Showing all 4 projects</p>
+        </div>
+
+        <div class="project-grid" data-project-grid>
+
+          <!-- 01 · GIGPASS (FEATURED) -->
+          <article class="project project--featured" id="project-gigpass" data-project="gigpass" data-category="web" data-reveal>
+            <div class="project-visual project-visual--gigpass" data-project-visual data-tilt aria-hidden="true">
+              <div class="project-depth" data-project-depth>
+                <div class="project-depth__layer project-depth__layer--back" data-depth="0.2"></div>
+                <div class="project-depth__layer project-depth__layer--mid" data-depth="0.5"></div>
+                <div class="project-depth__layer project-depth__layer--front" data-depth="0.9"></div>
+              </div>
+
+              <div class="project-screen project-screen--passport" data-project-screen>
+                <div class="passport">
+                  <div class="passport__header">
+                    <span class="passport__brand">GIGPASS</span>
+                    <span class="passport__badge">VERIFIED</span>
+                  </div>
+                  <div class="passport__identity">
+                    <span class="passport__avatar"></span>
+                    <span class="passport__lines">
+                      <span class="passport__line passport__line--long"></span>
+                      <span class="passport__line passport__line--short"></span>
+                    </span>
+                    <span class="passport__score">4.9</span>
+                  </div>
+                  <div class="passport__metrics">
+                    <span class="passport__metric"><span class="passport__metric-label">JOBS</span><span class="passport__metric-value">248</span></span>
+                    <span class="passport__metric"><span class="passport__metric-label">RATING</span><span class="passport__metric-value">4.9</span></span>
+                    <span class="passport__metric"><span class="passport__metric-label">RELIABILITY</span><span class="passport__metric-value">98%</span></span>
+                  </div>
+                  <div class="passport__platforms">
+                    <span class="passport__platform"></span>
+                    <span class="passport__platform"></span>
+                    <span class="passport__platform"></span>
+                    <span class="passport__platform"></span>
+                  </div>
+                  <div class="passport__hash">
+                    <span class="passport__hash-label">SIG</span>
+                    <span class="passport__hash-value">a3f9…c71e</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-screen project-screen--secondary" data-project-screen-secondary>
+                <span class="project-screen__chip">PORTABLE</span>
+                <span class="project-screen__chip">SIGNED</span>
+              </div>
             </div>
 
-        </section>
+            <div class="project-content" data-project-content>
+              <div class="project-content__meta">
+                <span class="project-content__number">01</span>
+                <span class="project-content__category">Web · Concept</span>
+                <span class="project-content__year">2026</span>
+              </div>
+              <h3 class="project-content__title">GigPass</h3>
+              <p class="project-content__subtitle">Gig-Worker Portable Reputation Passport</p>
+              <p class="project-content__description">
+                A concept for a portable, verifiable reputation passport that allows gig workers to carry trusted work history, ratings, and reliability data between platforms.
+              </p>
+              <ul class="tech-list" role="list" aria-label="Technologies">
+                <li class="tech">HTML</li>
+                <li class="tech">CSS</li>
+                <li class="tech">JavaScript</li>
+                <li class="tech">Cryptography</li>
+              </ul>
+              <div class="project-content__actions">
+                <a class="project-link" href="https://github.com/dakshkumawat07/gig-worker-reputation-passport" target="_blank" rel="noopener noreferrer">
+                  <span class="project-link__label">View on GitHub</span>
+                  <span class="project-link__icon" aria-hidden="true">↗</span>
+                  <span class="visually-hidden">GigPass repository (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-    </main>
+          <!-- 02 · SYSTEM HEALTH MONITOR -->
+          <article class="project" id="project-system-health-monitor" data-project="system-health-monitor" data-category="python" data-reveal>
+            <div class="project-visual project-visual--monitor" data-project-visual data-tilt aria-hidden="true">
+              <div class="project-depth" data-project-depth>
+                <div class="project-depth__layer project-depth__layer--back" data-depth="0.2"></div>
+                <div class="project-depth__layer project-depth__layer--front" data-depth="0.8"></div>
+              </div>
+              <div class="project-screen project-screen--monitor" data-project-screen>
+                <div class="monitor">
+                  <div class="monitor__titlebar">
+                    <span class="monitor__title">system-health-monitor</span>
+                    <span class="monitor__status">OK</span>
+                  </div>
+                  <div class="monitor__metrics">
+                    <div class="monitor__metric">
+                      <span class="monitor__label">CPU</span>
+                      <span class="monitor__bar"><span class="monitor__fill" data-value="42"></span></span>
+                      <span class="monitor__value">42%</span>
+                    </div>
+                    <div class="monitor__metric">
+                      <span class="monitor__label">MEM</span>
+                      <span class="monitor__bar"><span class="monitor__fill" data-value="63"></span></span>
+                      <span class="monitor__value">63%</span>
+                    </div>
+                    <div class="monitor__metric">
+                      <span class="monitor__label">DISK</span>
+                      <span class="monitor__bar"><span class="monitor__fill" data-value="71"></span></span>
+                      <span class="monitor__value">71%</span>
+                    </div>
+                    <div class="monitor__metric">
+                      <span class="monitor__label">NET</span>
+                      <span class="monitor__bar"><span class="monitor__fill" data-value="18"></span></span>
+                      <span class="monitor__value">18%</span>
+                    </div>
+                  </div>
+                  <div class="monitor__footer">
+                    <span class="monitor__uptime">UPTIME 03:14:07</span>
+                    <span class="monitor__graph">
+                      <span class="monitor__spark"></span>
+                      <span class="monitor__spark"></span>
+                      <span class="monitor__spark"></span>
+                      <span class="monitor__spark"></span>
+                      <span class="monitor__spark"></span>
+                      <span class="monitor__spark"></span>
+                      <span class="monitor__spark"></span>
+                      <span class="monitor__spark"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="project-content" data-project-content>
+              <div class="project-content__meta">
+                <span class="project-content__number">02</span>
+                <span class="project-content__category">Python · Utility</span>
+                <span class="project-content__year">2026</span>
+              </div>
+              <h3 class="project-content__title">System Health Monitor</h3>
+              <p class="project-content__subtitle">Real-time system diagnostics from the terminal</p>
+              <p class="project-content__description">
+                A Python utility that monitors CPU, memory, disk, network information, uptime, and overall system health.
+              </p>
+              <ul class="tech-list" role="list" aria-label="Technologies">
+                <li class="tech">Python</li>
+                <li class="tech">psutil</li>
+                <li class="tech">Linux</li>
+              </ul>
+              <div class="project-content__actions">
+                <a class="project-link" href="https://github.com/dakshkumawat07/system-health-monitor" target="_blank" rel="noopener noreferrer">
+                  <span class="project-link__label">View on GitHub</span>
+                  <span class="project-link__icon" aria-hidden="true">↗</span>
+                  <span class="visually-hidden">System Health Monitor repository (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="site-footer">
+          <!-- 03 · ATM SIMULATOR -->
+          <article class="project" id="project-atm-simulator" data-project="atm-simulator" data-category="c" data-reveal>
+            <div class="project-visual project-visual--atm" data-project-visual data-tilt aria-hidden="true">
+              <div class="project-depth" data-project-depth>
+                <div class="project-depth__layer project-depth__layer--back" data-depth="0.2"></div>
+                <div class="project-depth__layer project-depth__layer--front" data-depth="0.8"></div>
+              </div>
+              <div class="project-screen project-screen--atm" data-project-screen>
+                <div class="atm">
+                  <div class="atm__display">
+                    <span class="atm__prompt">ENTER PIN</span>
+                    <span class="atm__pin">
+                      <span class="atm__pin-dot is-filled"></span>
+                      <span class="atm__pin-dot is-filled"></span>
+                      <span class="atm__pin-dot is-filled"></span>
+                      <span class="atm__pin-dot"></span>
+                    </span>
+                    <span class="atm__balance">BAL ₹ 12,450.00</span>
+                  </div>
+                  <div class="atm__keypad">
+                    <span class="atm__key">1</span><span class="atm__key">2</span><span class="atm__key">3</span>
+                    <span class="atm__key">4</span><span class="atm__key">5</span><span class="atm__key">6</span>
+                    <span class="atm__key">7</span><span class="atm__key">8</span><span class="atm__key">9</span>
+                    <span class="atm__key atm__key--cancel">C</span><span class="atm__key">0</span><span class="atm__key atm__key--enter">↵</span>
+                  </div>
+                  <div class="atm__slot"></div>
+                </div>
+              </div>
+            </div>
 
-        <p>
-            © 2026 Daksh Kumawat. Built with HTML, CSS & JavaScript.
+            <div class="project-content" data-project-content>
+              <div class="project-content__meta">
+                <span class="project-content__number">03</span>
+                <span class="project-content__category">C · Console</span>
+                <span class="project-content__year">2026</span>
+              </div>
+              <h3 class="project-content__title">ATM Simulator</h3>
+              <p class="project-content__subtitle">Banking logic, state, and authentication in C</p>
+              <p class="project-content__description">
+                A console-based ATM simulation with PIN authentication, balance management, deposits, withdrawals, and transaction history.
+              </p>
+              <ul class="tech-list" role="list" aria-label="Technologies">
+                <li class="tech">C</li>
+              </ul>
+              <div class="project-content__actions">
+                <a class="project-link" href="https://github.com/dakshkumawat07/atm-simulator" target="_blank" rel="noopener noreferrer">
+                  <span class="project-link__label">View on GitHub</span>
+                  <span class="project-link__icon" aria-hidden="true">↗</span>
+                  <span class="visually-hidden">ATM Simulator repository (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 · STUDENT MARKS ANALYZER -->
+          <article class="project" id="project-student-marks-analyzer" data-project="student-marks-analyzer" data-category="c" data-reveal>
+            <div class="project-visual project-visual--analyzer" data-project-visual data-tilt aria-hidden="true">
+              <div class="project-depth" data-project-depth>
+                <div class="project-depth__layer project-depth__layer--back" data-depth="0.2"></div>
+                <div class="project-depth__layer project-depth__layer--front" data-depth="0.8"></div>
+              </div>
+              <div class="project-screen project-screen--chart" data-project-screen>
+                <div class="chart">
+                  <div class="chart__header">
+                    <span class="chart__title">marks.dat</span>
+                    <span class="chart__legend"><span class="chart__legend-dot"></span>Grade distribution</span>
+                  </div>
+                  <div class="chart__bars">
+                    <span class="chart__bar" data-value="35"><span class="chart__bar-label">F</span></span>
+                    <span class="chart__bar" data-value="50"><span class="chart__bar-label">D</span></span>
+                    <span class="chart__bar" data-value="72"><span class="chart__bar-label">C</span></span>
+                    <span class="chart__bar chart__bar--highlight" data-value="95"><span class="chart__bar-label">B</span></span>
+                    <span class="chart__bar" data-value="64"><span class="chart__bar-label">A</span></span>
+                  </div>
+                  <div class="chart__axis"></div>
+                  <div class="chart__stats">
+                    <span class="chart__stat"><span class="chart__stat-label">MAX</span><span class="chart__stat-value">98</span></span>
+                    <span class="chart__stat"><span class="chart__stat-label">MIN</span><span class="chart__stat-value">41</span></span>
+                    <span class="chart__stat"><span class="chart__stat-label">AVG</span><span class="chart__stat-value">74.2</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content" data-project-content>
+              <div class="project-content__meta">
+                <span class="project-content__number">04</span>
+                <span class="project-content__category">C · Data</span>
+                <span class="project-content__year">2026</span>
+              </div>
+              <h3 class="project-content__title">Student Marks Analyzer</h3>
+              <p class="project-content__subtitle">Arrays, functions, and statistics in C</p>
+              <p class="project-content__description">
+                A C program that analyzes student marks, calculates totals, identifies highest and lowest scores, and provides grade statistics.
+              </p>
+              <ul class="tech-list" role="list" aria-label="Technologies">
+                <li class="tech">C</li>
+                <li class="tech">Arrays</li>
+                <li class="tech">Functions</li>
+              </ul>
+              <div class="project-content__actions">
+                <a class="project-link" href="https://github.com/dakshkumawat07/Student-Marks-Analyzer" target="_blank" rel="noopener noreferrer">
+                  <span class="project-link__label">View on GitHub</span>
+                  <span class="project-link__icon" aria-hidden="true">↗</span>
+                  <span class="visually-hidden">Student Marks Analyzer repository (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="projects__footnote" data-reveal>
+          More experiments live on <a class="inline-link" href="https://github.com/dakshkumawat07" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>.
         </p>
+      </div>
+    </section>
 
-    </footer>
+    <!-- ==========================================================
+         PROOF / EXPERIENCE
+         ========================================================== -->
+    <section class="section proof" id="proof" aria-labelledby="proof-heading" data-section="proof">
+      <div class="section__inner">
+        <header class="section__header" data-reveal>
+          <p class="section__number"><span class="section__num">04</span><span class="section__slash" aria-hidden="true">/</span><span class="section__label">Proof</span></p>
+          <h2 class="section__title" id="proof-heading">
+            <span class="section__title-line" data-split>Curiosity backed by</span>
+            <span class="section__title-line" data-split>action.</span>
+          </h2>
+          <p class="section__intro">
+            Hackathons, simulations, and courses I have completed in my first year. Small steps, documented honestly.
+          </p>
+        </header>
 
+        <ol class="timeline" role="list" data-timeline>
+          <span class="timeline__rail" aria-hidden="true"><span class="timeline__rail-fill" data-timeline-fill></span></span>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+          <li class="timeline__item" data-timeline-item data-reveal>
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <p class="timeline__index">01</p>
+              <div class="timeline__body">
+                <h3 class="timeline__title">Craft N Code Rajasthan State Qualifier</h3>
+                <p class="timeline__org">Manipal University Jaipur</p>
+                <p class="timeline__note">My first hackathon experience as a first-year student.</p>
+              </div>
+              <p class="timeline__date"><time datetime="2026-08">August 2026</time></p>
+              <span class="timeline__type">Hackathon</span>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-timeline-item data-reveal>
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <p class="timeline__index">02</p>
+              <div class="timeline__body">
+                <h3 class="timeline__title">GenAI Powered Data Analytics</h3>
+                <p class="timeline__org">Forage Job Simulation</p>
+              </div>
+              <p class="timeline__date"><time datetime="2026-08">August 2026</time></p>
+              <span class="timeline__type">Simulation</span>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-timeline-item data-reveal>
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <p class="timeline__index">03</p>
+              <div class="timeline__body">
+                <h3 class="timeline__title">Data Science &amp; Analytics</h3>
+                <p class="timeline__org">HP LIFE</p>
+              </div>
+              <p class="timeline__date"><time datetime="2026-07">July 2026</time></p>
+              <span class="timeline__type">Course</span>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-timeline-item data-reveal>
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <p class="timeline__index">04</p>
+              <div class="timeline__body">
+                <h3 class="timeline__title">Cyber Job Simulation</h3>
+                <p class="timeline__org">Deloitte · Forage</p>
+              </div>
+              <p class="timeline__date"><time datetime="2026-07">July 2026</time></p>
+              <span class="timeline__type">Simulation</span>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         EDUCATION
+         ========================================================== -->
+    <section class="section education" id="education" aria-labelledby="education-heading" data-section="education">
+      <div class="section__inner">
+        <header class="section__header" data-reveal>
+          <p class="section__number"><span class="section__num">05</span><span class="section__slash" aria-hidden="true">/</span><span class="section__label">Education</span></p>
+          <h2 class="section__title" id="education-heading">
+            <span class="section__title-line" data-split>Just getting</span>
+            <span class="section__title-line" data-split>started.</span>
+          </h2>
+        </header>
+
+        <div class="education__layout">
+          <article class="education__card" data-reveal data-parallax="0.1">
+            <p class="education__degree-label">Degree</p>
+            <h3 class="education__degree">Bachelor of Technology in Computer Science</h3>
+            <p class="education__institution">Manipal University Jaipur</p>
+            <p class="education__period">
+              <time datetime="2026">2026</time>
+              <span class="education__dash" aria-hidden="true">—</span>
+              <span>Present</span>
+            </p>
+            <dl class="education__details">
+              <div class="education__detail">
+                <dt>Year</dt>
+                <dd>First</dd>
+              </div>
+              <div class="education__detail">
+                <dt>Location</dt>
+                <dd>Jaipur, Rajasthan</dd>
+              </div>
+            </dl>
+          </article>
+
+          <aside class="education__next" data-reveal data-parallax="0.2">
+            <p class="education__next-label">Next direction</p>
+            <p class="education__next-value">
+              <span class="education__next-item">AI</span>
+              <span class="education__next-sep" aria-hidden="true">·</span>
+              <span class="education__next-item">ML</span>
+              <span class="education__next-sep" aria-hidden="true">·</span>
+              <span class="education__next-item">Data Science</span>
+            </p>
+            <a class="inline-link" href="#direction">See the roadmap <span aria-hidden="true">→</span></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CURRENT DIRECTION
+         ========================================================== -->
+    <section class="section direction" id="direction" aria-labelledby="direction-heading" data-section="direction">
+      <div class="section__inner">
+        <header class="section__header" data-reveal>
+          <p class="section__number"><span class="section__num">05.1</span><span class="section__slash" aria-hidden="true">/</span><span class="section__label">Direction</span></p>
+          <h2 class="section__title" id="direction-heading">
+            <span class="section__title-line" data-split>What's next?</span>
+          </h2>
+          <p class="section__intro">
+            A roadmap, not a résumé. These are the fields I am currently exploring and the next concrete steps I plan to take.
+          </p>
+        </header>
+
+        <ol class="roadmap" role="list" data-roadmap>
+          <span class="roadmap__line" aria-hidden="true"></span>
+
+          <li class="roadmap__step" data-roadmap-step data-reveal>
+            <span class="roadmap__node" aria-hidden="true"></span>
+            <article class="roadmap__card">
+              <p class="roadmap__status">Currently exploring</p>
+              <h3 class="roadmap__title">AI</h3>
+              <p class="roadmap__description">
+                Understanding the fundamentals behind modern AI systems, starting with the math and Python tooling that everything else builds on.
+              </p>
+              <ul class="roadmap__next" role="list" aria-label="Planned next steps for AI">
+                <li>Linear algebra and probability refreshers</li>
+                <li>NumPy-based experiments</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="roadmap__step" data-roadmap-step data-reveal>
+            <span class="roadmap__node" aria-hidden="true"></span>
+            <article class="roadmap__card">
+              <p class="roadmap__status">Currently exploring</p>
+              <h3 class="roadmap__title">Machine Learning</h3>
+              <p class="roadmap__description">
+                Learning how models learn from data: supervised learning, evaluation, and the trade-offs behind common algorithms.
+              </p>
+              <ul class="roadmap__next" role="list" aria-label="Planned next steps for Machine Learning">
+                <li>First classification project with scikit-learn</li>
+                <li>Documenting experiments on GitHub</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="roadmap__step" data-roadmap-step data-reveal>
+            <span class="roadmap__node" aria-hidden="true"></span>
+            <article class="roadmap__card">
+              <p class="roadmap__status">Currently exploring</p>
+              <h3 class="roadmap__title">Data Science</h3>
+              <p class="roadmap__description">
+                Building on the HP LIFE and Forage simulations to practise cleaning, analysing, and communicating real datasets.
+              </p>
+              <ul class="roadmap__next" role="list" aria-label="Planned next steps for Data Science">
+                <li>pandas and visualisation practice</li>
+                <li>One end-to-end analysis project</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CONTACT
+         ========================================================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading" data-section="contact">
+      <div class="section__inner">
+        <header class="section__header" data-reveal>
+          <p class="section__number"><span class="section__num">06</span><span class="section__slash" aria-hidden="true">/</span><span class="section__label">Contact</span></p>
+          <h2 class="section__title section__title--large" id="contact-heading">
+            <span class="section__title-line" data-split>What should we</span>
+            <span class="section__title-line" data-split>build next?</span>
+          </h2>
+          <p class="section__intro">
+            I'm always open to connecting with students, developers, mentors, and people interested in building useful technology.
+          </p>
+        </header>
+
+        <ul class="contact-list" role="list" data-reveal>
+          <li class="contact-item">
+            <a class="contact-link" href="mailto:dakshkumawat239@gmail.com" data-contact="email">
+              <span class="contact-link__label">Email</span>
+              <span class="contact-link__value">dakshkumawat239@gmail.com</span>
+              <span class="contact-link__icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a class="contact-link" href="https://github.com/dakshkumawat07" target="_blank" rel="noopener noreferrer" data-contact="github">
+              <span class="contact-link__label">GitHub</span>
+              <span class="contact-link__value">github.com/dakshkumawat07</span>
+              <span class="contact-link__icon" aria-hidden="true">↗</span>
+              <span class="visually-hidden">(opens in a new tab)</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a class="contact-link" href="https://www.linkedin.com/in/daksh-kumawat07/" target="_blank" rel="noopener noreferrer" data-contact="linkedin">
+              <span class="contact-link__label">LinkedIn</span>
+              <span class="contact-link__value">linkedin.com/in/daksh-kumawat07</span>
+              <span class="contact-link__icon" aria-hidden="true">↗</span>
+              <span class="visually-hidden">(opens in a new tab)</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="contact__availability" data-reveal>
+          <span class="status-dot" aria-hidden="true"></span>
+          Currently open to internship opportunities and collaborative student projects.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" data-footer>
+    <div class="site-footer__inner">
+      <p class="site-footer__copy">© 2026 Daksh Kumawat</p>
+      <p class="site-footer__built">Built with HTML · CSS · JavaScript</p>
+      <a class="site-footer__top" href="#top" data-back-to-top>
+        <span class="site-footer__top-label">Back to top</span>
+        <span class="site-footer__top-icon" aria-hidden="true">↑</span>
+      </a>
+    </div>
+    <p class="site-footer__marquee" aria-hidden="true" data-marquee>
+      <span class="site-footer__marquee-track">Daksh Kumawat · Computer Science Student · Manipal University Jaipur · Building things that actually work · Daksh Kumawat · Computer Science Student · Manipal University Jaipur · Building things that actually work ·</span>
+    </p>
+  </footer>
+
+  <div class="cursor" data-cursor aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
 
 </body>
 </html>
